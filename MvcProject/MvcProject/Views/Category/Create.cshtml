@@ -1,0 +1,23 @@
+﻿@model Category
+@{
+    SelectList catList = new SelectList(ViewBag.categories, "CategoryId", "Name");
+}
+<h1>Create Category</h1>
+
+<form method="post">
+
+    <div asp-validation-summary="All"></div>
+    <label asp-for="Name"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+    <br />
+
+    <label asp-for="ParentCategoryId"></label>
+    <select asp-for="ParentCategoryId" asp-items="catList" class="form-control">
+        <option value="">-- Select Parent Category --</option>
+    </select>
+ 
+
+    <input type="submit" value="Create" class="btn btn-primary" />
+
+</form>

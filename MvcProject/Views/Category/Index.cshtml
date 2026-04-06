@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Category>
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<div class="container py-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Categories</h2>
+        <a asp-action="Create" class="btn btn-dark">Add category</a>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+            <table class="table table-hover mb-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Parent category</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (!Model.Any())
+                    {
+                        <tr>
+                            <td colspan="4" class="text-center text-muted py-4">No categories found.</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        @foreach (var item in Model)
+                        {
+                            <tr class="align-middle">
+                                <td class="text-muted">@item.CategoryId</td>
+                                <td><strong>@item.Name</strong></td>
+                                <td>
+                                    @if (item.ParentCategory != null)
+                                    {
+                                        <span class="badge bg-secondary">@item.ParentCategory.Name</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">No parent</span>
+                                    }
+                                </td>
+                                <td class="text-end">
+                                    <a asp-action="Edit"
+                                       asp-route-id="@item.CategoryId"
+                                       class="btn btn-outline-warning btn-sm">
+                                        Edit
+                                    </a>
+                                    <a asp-action="Delete"
+                                       asp-route-id="@item.CategoryId"
+                                       class="btn btn-outline-danger btn-sm">
+                                        Delete
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,87 @@
+﻿@model CartVM
+@{
+    ViewData["Title"] = "Cart";
+}
+
+
+<div class="container py-4">
+
+    <h2 class="mb-4">Your Cart</h2>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    @if (Model.CartItems == null || !Model.CartItems.Any())
+    {
+        <div class="text-center py-5">
+            <p class="text-muted fs-5">Your cart is empty.</p>
+            <a asp-controller="Catalog" asp-action="Index" class="btn btn-dark mt-2">Browse products</a>
+        </div>
+    }
+    else
+    {
+        <div class="card shadow-sm">
+            <div class="card-body p-0">
+                <table class="table table-hover mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.CartItems)
+                        {
+                            <tr class="align-middle">
+                                <td>@item.ProductName</td>
+                                <td>$@item.Price</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <form asp-action="Update" method="post">
+                                            <input name="itemId" value="@item.ProductId" type="hidden" />
+                                            <input name="qty" value="@(item.Quantity - 1)" type="hidden" />
+                                            <button type="submit" class="btn btn-outline-secondary btn-sm">-</button>
+                                        </form>
+                                        <span class="fw-bold">@item.Quantity</span>
+                                        <form asp-action="Update" method="post">
+                                            <input name="itemId" value="@item.ProductId" type="hidden" />
+                                            <input name="qty" value="@(item.Quantity + 1)" type="hidden" />
+                                            <button type="submit" class="btn btn-outline-secondary btn-sm">+</button>
+                                        </form>
+                                    </div>
+                                </td>
+                                <td class="fw-bold text-success">$@(item.Price* item.Quantity)</td>
+                                <td>
+                                    <form asp-action="Remove" method="post">
+                                        <input name="itemId" value="@item.ProductId" type="hidden" />
+                                        <button type="submit" class="btn btn-outline-danger btn-sm">Remove</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+            <h5 class="mb-0">Total: <span class="text-success fw-bold">$@Model.TotalPrice</span></h5>
+            <div class="d-flex gap-2">
+                <a asp-controller="Catalog" asp-action="Index" class="btn btn-outline-dark">
+                    Continue shopping
+                </a>
+                <a asp-controller="Order" asp-action="Checkout" class="btn btn-warning">
+                    Checkout
+                </a>
+            </div>
+        </div>
+    }
+
+</div>

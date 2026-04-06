@@ -1,0 +1,22 @@
+﻿@using MvcProject.Models.ViewModel
+@model CategoryEditVM
+@{
+    // SelectList catList = new SelectList(ViewBag.categories, "CategoryId", "Name");
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+<form method="post">
+        <div asp-validation-summary="All"></div>
+    <input asp-for="CategoryId" type="hidden" />
+    <label asp-for="Name"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+    <br />
+    <label asp-for="ParentCategoryId"></label>
+    <select asp-for="ParentCategoryId" asp-items="Model.Categories" class="form-control">
+        <option value="">-- Select Parent Category --</option>
+    </select>
+    <br />
+    <input type="submit" value="Edit" class="btn btn-primary" /> 
+</form>

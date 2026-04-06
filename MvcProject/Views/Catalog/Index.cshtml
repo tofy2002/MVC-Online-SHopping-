@@ -1,0 +1,95 @@
+﻿    @model ProductListVM
+@{
+    ViewData["Title"] = "Products";
+}
+
+<div class="container py-4">
+
+    <h2 class="mb-4">Our Products</h2>
+
+    <form method="get" class="row g-2 mb-4">
+        <div class="col-md-4">
+            <input asp-for="Search"
+                   type="text"
+                   value="@Model.Search"
+                   placeholder="Search products..."
+                   class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <select asp-for="CategId" asp-items="Model.Categories" class="form-select">
+                <option value="">-- All categories --</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select name="Sort" class="form-select">
+                <option value="">Sort by</option>
+                <option value="price_asc">Price low to high</option>
+                <option value="price_desc">Price high to low</option>
+                <option value="Latest">Latest</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-dark w-100">Search</button>
+        </div>
+    </form>
+
+    <p class="text-muted mb-3">Showing @Model.Products.Count of @Model.TotalCount products</p>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+        @foreach (var item in Model.Products)
+        {
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <span class="badge bg-secondary mb-2">@item.CategoryName</span>
+                        <h5 class="card-title">@item.Name</h5>
+                        <p class="card-text fs-5 fw-bold text-success">$@item.Price</p>
+                        @if (item.StockQuantity > 0)
+                        {
+                            <span class="badge bg-success-subtle text-success">In stock</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-danger-subtle text-danger">Out of stock</span>
+                        }
+                    </div>
+                    <div class="card-footer bg-white border-top-0 d-flex gap-2">
+                        <a asp-action="Details"
+                           asp-route-id="@item.ProductId"
+                           class="btn btn-outline-dark btn-sm flex-grow-1">
+                            Details
+                        </a>
+                        <a asp-action="Add"
+                           asp-controller="Cart"
+                           asp-route-prodId="@item.ProductId"
+                           class="btn btn-warning btn-sm flex-grow-1">
+                            Add to cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    @if (Model.TotalPages > 1)
+    {
+        <nav>
+            <ul class="pagination justify-content-center">
+                @for (int i = 1; i <= Model.TotalPages; i++)
+                {
+                    <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                        <a class="page-link"
+                           asp-action="Index"
+                           asp-route-page="@i"
+                           asp-route-CategId="@Model.CategId"
+                           asp-route-Search="@Model.Search"
+                           asp-route-Sort="@Model.Sort">
+                            @i
+                        </a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    }
+
+</div>

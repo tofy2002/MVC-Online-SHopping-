@@ -1,0 +1,68 @@
+﻿@using MvcProject.Controllers
+@model IEnumerable<Order>
+@{
+    ViewData["Title"] = "Order management";
+}
+
+<div class="container py-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Order management</h2>
+        <span class="badge bg-secondary fs-6">@Model.Count() orders</span>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+            <table class="table table-hover mb-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Order number</th>
+                        <th>Customer</th>
+                        <th>Date</th>
+                        <th>Total</th>
+                        <th>Current status</th>
+                        <th>Update status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model == null || !Model.Any())
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center text-muted py-4">No orders found.</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        @foreach (var order in Model)
+                        {
+                            <tr class="align-middle">
+                                <td><strong>@order.OrderNo</strong></td>
+                                <td>@order.Customer.FullName</td>
+                                <td>@order.OrderDate.ToString("dd MMM yyyy")</td>
+                                <td class="text-success fw-bold">$@order.TotalAmount</td>
+                                <td>
+                                    <span class="badge
+                                                @(order.Status.ToString() == "pending" ? "bg-warning text-dark" :
+                                                                                    order.Status.ToString() == "confirmed" ? "bg-info text-dark" :
+                                                                                    order.Status.ToString() == "shipping" ? "bg-primary" : "bg-success")">
+                                        @order.Status
+                                    </span>
+                                </td>
+                                <td>
+                                    <form method="post" asp-action="UpdateStatus" asp-controller="OrderStatus" class="d-flex gap-2">
+                                        <input type="hidden" value="@order.OrderId" name="orderid" />
+                                        <select name="status" asp-items="ViewBag.StatusList" class="form-select form-select-sm">
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                        <button class="btn btn-dark btn-sm">Update</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

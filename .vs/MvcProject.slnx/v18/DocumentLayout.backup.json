@@ -1,0 +1,187 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9519FA-44D2-A3A3-FE0F-C003DD1E39AD}|MvcProject\\MvcProject.csproj|c:\\users\\nourhan\\downloads\\mvcproject\\mvcproject\\models\\viewmodel\\addressvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9519FA-44D2-A3A3-FE0F-C003DD1E39AD}|MvcProject\\MvcProject.csproj|solutionrelative:mvcproject\\models\\viewmodel\\addressvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9519FA-44D2-A3A3-FE0F-C003DD1E39AD}|MvcProject\\MvcProject.csproj|c:\\users\\nourhan\\downloads\\mvcproject\\mvcproject\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9519FA-44D2-A3A3-FE0F-C003DD1E39AD}|MvcProject\\MvcProject.csproj|solutionrelative:mvcproject\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9519FA-44D2-A3A3-FE0F-C003DD1E39AD}|MvcProject\\MvcProject.csproj|c:\\users\\nourhan\\downloads\\mvcproject\\mvcproject\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9519FA-44D2-A3A3-FE0F-C003DD1E39AD}|MvcProject\\MvcProject.csproj|solutionrelative:mvcproject\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9519FA-44D2-A3A3-FE0F-C003DD1E39AD}|MvcProject\\MvcProject.csproj|c:\\users\\nourhan\\downloads\\mvcproject\\mvcproject\\models\\viewmodel\\ordervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9519FA-44D2-A3A3-FE0F-C003DD1E39AD}|MvcProject\\MvcProject.csproj|solutionrelative:mvcproject\\models\\viewmodel\\ordervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9519FA-44D2-A3A3-FE0F-C003DD1E39AD}|MvcProject\\MvcProject.csproj|c:\\users\\nourhan\\downloads\\mvcproject\\mvcproject\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9519FA-44D2-A3A3-FE0F-C003DD1E39AD}|MvcProject\\MvcProject.csproj|solutionrelative:mvcproject\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9519FA-44D2-A3A3-FE0F-C003DD1E39AD}|MvcProject\\MvcProject.csproj|c:\\users\\nourhan\\downloads\\mvcproject\\mvcproject\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3D9519FA-44D2-A3A3-FE0F-C003DD1E39AD}|MvcProject\\MvcProject.csproj|solutionrelative:mvcproject\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9519FA-44D2-A3A3-FE0F-C003DD1E39AD}|MvcProject\\MvcProject.csproj|c:\\users\\nourhan\\downloads\\mvcproject\\mvcproject\\models\\viewmodel\\orderdetailsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9519FA-44D2-A3A3-FE0F-C003DD1E39AD}|MvcProject\\MvcProject.csproj|solutionrelative:mvcproject\\models\\viewmodel\\orderdetailsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88C0EC91-EE4A-C215-E2A1-6C66A6CAFE8D}|OnlineShopping\\OnlineShopping.csproj|c:\\users\\nourhan\\downloads\\mvcproject\\onlineshopping\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88C0EC91-EE4A-C215-E2A1-6C66A6CAFE8D}|OnlineShopping\\OnlineShopping.csproj|solutionrelative:onlineshopping\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9519FA-44D2-A3A3-FE0F-C003DD1E39AD}|MvcProject\\MvcProject.csproj|c:\\users\\nourhan\\downloads\\mvcproject\\mvcproject\\models\\viewmodel\\productdetailsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9519FA-44D2-A3A3-FE0F-C003DD1E39AD}|MvcProject\\MvcProject.csproj|solutionrelative:mvcproject\\models\\viewmodel\\productdetailsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9519FA-44D2-A3A3-FE0F-C003DD1E39AD}|MvcProject\\MvcProject.csproj|c:\\users\\nourhan\\downloads\\mvcproject\\mvcproject\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3D9519FA-44D2-A3A3-FE0F-C003DD1E39AD}|MvcProject\\MvcProject.csproj|solutionrelative:mvcproject\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\MvcProject\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "MvcProject\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\MvcProject\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "MvcProject\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAgwIgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T18:25:16.943Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddressVM.cs",
+              "DocumentMoniker": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\MvcProject\\Models\\ViewModel\\AddressVM.cs",
+              "RelativeDocumentMoniker": "MvcProject\\Models\\ViewModel\\AddressVM.cs",
+              "ToolTip": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\MvcProject\\Models\\ViewModel\\AddressVM.cs",
+              "RelativeToolTip": "MvcProject\\Models\\ViewModel\\AddressVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-06T15:46:01.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderVM.cs",
+              "DocumentMoniker": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\MvcProject\\Models\\ViewModel\\OrderVM.cs",
+              "RelativeDocumentMoniker": "MvcProject\\Models\\ViewModel\\OrderVM.cs",
+              "ToolTip": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\MvcProject\\Models\\ViewModel\\OrderVM.cs",
+              "RelativeToolTip": "MvcProject\\Models\\ViewModel\\OrderVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T18:28:49.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderDetailsVM.cs",
+              "DocumentMoniker": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\MvcProject\\Models\\ViewModel\\OrderDetailsVM.cs",
+              "RelativeDocumentMoniker": "MvcProject\\Models\\ViewModel\\OrderDetailsVM.cs",
+              "ToolTip": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\MvcProject\\Models\\ViewModel\\OrderDetailsVM.cs",
+              "RelativeToolTip": "MvcProject\\Models\\ViewModel\\OrderDetailsVM.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T18:27:58.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\MvcProject\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "MvcProject\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\MvcProject\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "MvcProject\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAswBkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T16:05:19.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\MvcProject\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "MvcProject\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\MvcProject\\Controllers\\CartController.cs",
+              "RelativeToolTip": "MvcProject\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwGYAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T18:37:48.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\MvcProject\\Views\\Cart\\Index.cshtml",
+              "RelativeDocumentMoniker": "MvcProject\\Views\\Cart\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\MvcProject\\Views\\Cart\\Index.cshtml",
+              "RelativeToolTip": "MvcProject\\Views\\Cart\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T18:53:22.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\OnlineShopping\\Product.cs",
+              "RelativeDocumentMoniker": "OnlineShopping\\Product.cs",
+              "ToolTip": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\OnlineShopping\\Product.cs",
+              "RelativeToolTip": "OnlineShopping\\Product.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T18:20:34.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\MvcProject\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "MvcProject\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\MvcProject\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "MvcProject\\Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAQwDMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T18:23:27.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductDetailsVM.cs",
+              "DocumentMoniker": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\MvcProject\\Models\\ViewModel\\ProductDetailsVM.cs",
+              "RelativeDocumentMoniker": "MvcProject\\Models\\ViewModel\\ProductDetailsVM.cs",
+              "ToolTip": "C:\\Users\\Nourhan\\Downloads\\MvcProject\\MvcProject\\Models\\ViewModel\\ProductDetailsVM.cs",
+              "RelativeToolTip": "MvcProject\\Models\\ViewModel\\ProductDetailsVM.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T18:17:24.237Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

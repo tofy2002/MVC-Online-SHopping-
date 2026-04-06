@@ -1,0 +1,76 @@
+﻿@model IEnumerable<ProductDetailsVM>
+@{
+    ViewData["Title"] = "Products";
+}
+
+<div class="container py-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Products</h2>
+        <a asp-action="Create" class="btn btn-dark">Add product</a>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+            <table class="table table-hover mb-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Category</th>
+                        <th>SKU</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (!Model.Any())
+                    {
+                        <tr>
+                            <td colspan="7" class="text-center text-muted py-4">No products found.</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        @foreach (var item in Model)
+                        {
+                            <tr class="align-middle">
+                                <td class="text-muted">@item.ProductId</td>
+                                <td><strong>@item.Name</strong></td>
+                                <td class="text-success fw-bold">$@item.Price</td>
+                                <td>
+                                    @if (item.StockQuantity > 0)
+                                    {
+                                        <span class="badge bg-success">@item.StockQuantity in stock</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger">Out of stock</span>
+                                    }
+                                </td>
+                                <td>
+                                    <span class="badge bg-secondary">@item.CategoryName</span>
+                                </td>
+                                <td class="text-muted small">@item.SKU</td>
+                                <td class="text-end">
+                                    <a asp-action="Edit"
+                                       asp-route-id="@item.ProductId"
+                                       class="btn btn-outline-warning btn-sm">
+                                        Edit
+                                    </a>
+                                    <a asp-action="Delete"
+                                       asp-route-id="@item.ProductId"
+                                       class="btn btn-outline-danger btn-sm">
+                                        Delete
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

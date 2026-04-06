@@ -1,0 +1,92 @@
+﻿@model OrderDetailsVM
+@{
+    ViewData["Title"] = "Order details";
+}
+
+<div class="container py-4">
+
+    <h2 class="mb-4">Order details</h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-5">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-dark text-white">
+                    <h5 class="mb-0">Order information</h5>
+                </div>
+                <div class="card-body">
+                    <p><span class="text-muted">Order number</span><br /><strong>@Model.OrderNo</strong></p>
+                    <p><span class="text-muted">Order date</span><br /><strong>@Model.OrderDate.ToString("dd MMM yyyy")</strong></p>
+                    <p>
+                        <span class="text-muted">Status</span><br />
+                        <span class="badge
+                            @(Model.Status.ToString() == "pending" ? "bg-warning text-dark" :
+                                                            Model.Status.ToString() == "confirmed" ? "bg-info text-dark" :
+                                                            Model.Status.ToString() == "shipping" ? "bg-primary" : "bg-success")">
+                            @Model.Status
+                        </span>
+                    </p>
+                    <p><span class="text-muted">Total</span><br /><strong class="text-success fs-5">$@Model.TotalPrice</strong></p>
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-header bg-dark text-white">
+                    <h5 class="mb-0">Customer</h5>
+                </div>
+                <div class="card-body">
+                    <p><span class="text-muted">Name</span><br /><strong>@Model.Customer.CustomerName</strong></p>
+                    <p><span class="text-muted">Email</span><br /><strong>@Model.Customer.CustomerEmail</strong></p>
+                    <p>
+                        <span class="text-muted">Shipping address</span><br />
+                        <strong>@Model.Address.Street</strong><br />
+                        <span>@Model.Address.City, @Model.Address.Country, @Model.Address.ZIP</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="card shadow-sm">
+                <div class="card-header bg-dark text-white">
+                    <h5 class="mb-0">Items</h5>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Qty</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.items)
+                            {
+                                <tr class="align-middle">
+                                    <td>@item.ProductName</td>
+                                    <td>$@item.UnitPrice</td>
+                                    <td>@item.Quantity</td>
+                                    <td class="fw-bold text-success">$@item.LineTotal</td>
+                                </tr>
+                            }
+                        </tbody>
+                        <tfoot class="table-light">
+                            <tr>
+                                <td colspan="3" class="text-end fw-bold">Total</td>
+                                <td class="fw-bold text-success fs-5">$@Model.TotalPrice</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <a asp-action="Index" class="btn btn-outline-dark">Back to my orders</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>

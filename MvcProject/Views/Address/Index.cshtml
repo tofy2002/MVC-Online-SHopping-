@@ -1,0 +1,54 @@
+﻿@model List<AddressVM>
+@{
+    ViewData["Title"] = "My addresses";
+}
+
+<div class="container py-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">My addresses</h2>
+        <a asp-action="Create" class="btn btn-dark">Add address</a>
+    </div>
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="text-center py-5">
+            <p class="text-muted fs-5">You have no saved addresses.</p>
+            <a asp-action="Create" class="btn btn-dark mt-2">Add your first address</a>
+        </div>
+    }
+    else
+    {
+        <div class="row g-3">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            @if (item.IsDefault)
+                            {
+                                <span class="badge bg-success mb-2">Default</span>
+                            }
+                            <p class="fw-bold mb-1">@item.Street</p>
+                            <p class="text-muted mb-0">@item.City, @item.Country</p>
+                            <p class="text-muted">@item.ZIP</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0 d-flex gap-2">
+                            <a asp-action="Edit"
+                               asp-route-id="@item.AddressId"
+                               class="btn btn-outline-warning btn-sm flex-grow-1">
+                                Edit
+                            </a>
+                            <a asp-action="Delete"
+                               asp-route-id="@item.AddressId"
+                               class="btn btn-outline-danger btn-sm flex-grow-1">
+                                Delete
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+
+</div>

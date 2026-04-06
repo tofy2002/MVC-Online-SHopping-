@@ -1,0 +1,14 @@
+C:\Users\Nourhan\Downloads\MvcProject\MvcProject\OnlineShopping\bin\Debug\net8.0\OnlineShopping.deps.json
+C:\Users\Nourhan\Downloads\MvcProject\MvcProject\OnlineShopping\bin\Debug\net8.0\OnlineShopping.runtimeconfig.json
+C:\Users\Nourhan\Downloads\MvcProject\MvcProject\OnlineShopping\bin\Debug\net8.0\OnlineShopping.dll
+C:\Users\Nourhan\Downloads\MvcProject\MvcProject\OnlineShopping\bin\Debug\net8.0\OnlineShopping.pdb
+C:\Users\Nourhan\Downloads\MvcProject\MvcProject\OnlineShopping\obj\Debug\net8.0\OnlineShopping.csproj.AssemblyReference.cache
+C:\Users\Nourhan\Downloads\MvcProject\MvcProject\OnlineShopping\obj\Debug\net8.0\OnlineShopping.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nourhan\Downloads\MvcProject\MvcProject\OnlineShopping\obj\Debug\net8.0\OnlineShopping.AssemblyInfoInputs.cache
+C:\Users\Nourhan\Downloads\MvcProject\MvcProject\OnlineShopping\obj\Debug\net8.0\OnlineShopping.AssemblyInfo.cs
+C:\Users\Nourhan\Downloads\MvcProject\MvcProject\OnlineShopping\obj\Debug\net8.0\OnlineShopping.csproj.CoreCompileInputs.cache
+C:\Users\Nourhan\Downloads\MvcProject\MvcProject\OnlineShopping\obj\Debug\net8.0\OnlineShopping.dll
+C:\Users\Nourhan\Downloads\MvcProject\MvcProject\OnlineShopping\obj\Debug\net8.0\refint\OnlineShopping.dll
+C:\Users\Nourhan\Downloads\MvcProject\MvcProject\OnlineShopping\obj\Debug\net8.0\OnlineShopping.pdb
+C:\Users\Nourhan\Downloads\MvcProject\MvcProject\OnlineShopping\obj\Debug\net8.0\OnlineShopping.genruntimeconfig.cache
+C:\Users\Nourhan\Downloads\MvcProject\MvcProject\OnlineShopping\obj\Debug\net8.0\ref\OnlineShopping.dll

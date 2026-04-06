@@ -1,0 +1,60 @@
+﻿@model List<UserManagementVM>
+@{
+    ViewData["Title"] = "User management";
+}
+
+<div class="container py-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">User management</h2>
+        <span class="badge bg-secondary fs-6">@Model.Count users</span>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+            <table class="table table-hover mb-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Current role</th>
+                        <th>Update role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in Model)
+                    {
+                        <tr class="align-middle">
+                            <td><strong>@user.FullName</strong></td>
+                            <td class="text-muted">@user.Email</td>
+                            <td>
+                                <span class="badge
+                                        @(user.CurrentRole == "SuperAdmin" ? "bg-dark" :
+                                                                            user.CurrentRole == "Admin" ? "bg-danger" : "bg-secondary")">
+                                    @user.CurrentRole
+                                </span>
+                            </td>
+                            <td>
+                                <form asp-action="UpdateRole" method="post" class="d-flex gap-2">
+                                    <input name="userid" value="@user.UserId" type="hidden" />
+                                    <select name="role" asp-items="ViewBag.Roles" class="form-select form-select-sm">
+                                        <option value="">-- Select role --</option>
+                                    </select>
+                                    <button type="submit" class="btn btn-dark btn-sm">Update</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

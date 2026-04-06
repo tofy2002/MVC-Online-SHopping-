@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Category>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<a asp-action="Create" class="btn btn-primary">Create</a>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Parent Category</th>
+            <th>action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+            @if (!Model.Any())
+            {
+                <tr>
+                <td colspan="4" class="text-center">No categories found.</td>
+                </tr>
+            }
+            else
+            {
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@item.CategoryId</td>
+                        <td>@item.Name</td>
+                        @* <td>@(item.ParentCategory?.Name?? "No Parent")</td> *@
+                        <td>
+                            @if (item.ParentCategory != null)
+                        {
+                            @item.ParentCategory.Name
+                        }
+                        else
+                        {
+                            <text>No Parent</text>
+                        }
+                        </td>
+                          
+                        <td>
+                         <a asp-action="Edit" asp-route-id="@item.CategoryId" class="btn btn-sm btn-warning">Edit</a>
+                         <a asp-action="Delete" asp-route-id="@item.CategoryId" class="btn btn-sm btn-warning">Delete</a>
+            </td>
+                    </tr>
+    }
+            }
+            

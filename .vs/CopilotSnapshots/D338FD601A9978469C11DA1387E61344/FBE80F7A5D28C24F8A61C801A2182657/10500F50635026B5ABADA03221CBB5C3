@@ -1,0 +1,52 @@
+﻿@model CartVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Quantity</td>
+        <td>Total Price</td>
+    </tr>
+    </thead>
+    <tbody>
+        @if (!Model.CartItems.Any())
+        {
+            <tr>
+                <td colspan="4" class="text-center">No Products till now.</td>
+            </tr>
+
+        }
+        else
+        {
+            @foreach(var item in Model.CartItems)
+            {
+                <tr>
+                    <td>@item.ProductName</td>
+                    <td>@item.Price</td>
+                    <form asp-action="Update" method="post">
+                        <input value="@item.ProductId" type="hidden" />
+                        <input value="@item.Quantity-1" type="hidden" />
+                        <button type="submit" class="btn btn-danger">-</button>
+                    </form>
+                    <td>@item.Quantity</td>
+                    <form asp-action="Update" method="post">
+                        <input value="@item.ProductId" type="hidden" />
+                        <input value="@item.Quantity+1" type="hidden" />
+                        <button type="submit" class="btn btn-danger">+</button>
+                    </form>
+                    <form asp-action="Remove" method="post">
+                        <input value="@item.ProductId" type="hidden" />
+                        <button type="submit" class="btn btn-danger" value="Remove">Remove</button>
+                    </form>
+                </tr>
+            }
+            
+        }
+    </tbody>
+</table>

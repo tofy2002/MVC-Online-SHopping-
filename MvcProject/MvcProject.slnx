@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MvcProject/MvcProject.csproj" />
+  <Project Path="OnlineShopping/OnlineShopping.csproj" />
+</Solution>

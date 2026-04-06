@@ -1,0 +1,61 @@
+﻿@model IEnumerable<OrderVM>
+@{
+    ViewData["Title"] = "My orders";
+}
+
+<div class="container py-4">
+
+    <h2 class="mb-4">My orders</h2>
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="text-center py-5">
+            <p class="text-muted fs-5">You have no orders yet.</p>
+            <a asp-controller="Catalog" asp-action="Index" class="btn btn-dark mt-2">Start shopping</a>
+        </div>
+    }
+    else
+    {
+        <div class="card shadow-sm">
+            <div class="card-body p-0">
+                <table class="table table-hover mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Order number</th>
+                            <th>Date</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr class="align-middle">
+                                <td><strong>@item.OrderNo</strong></td>
+                                <td>@item.dateTime.ToString("dd MMM yyyy HH:mm")</td>
+                                <td class="text-success fw-bold">$@item.TotalPriced</td>
+                                <td>
+                                    <span class="badge
+                                                @(item.Status.ToString() == "pending" ? "bg-warning text-dark" :
+                                                                                    item.Status.ToString() == "confirmed" ? "bg-info text-dark" :
+                                                                                    item.Status.ToString() == "shipping" ? "bg-primary" : "bg-success")">
+                                        @item.Status
+                                    </span>
+                                </td>
+                                <td>
+                                    <a asp-action="Details"
+                                       asp-route-id="@item.OrderID"
+                                       class="btn btn-outline-dark btn-sm">
+                                        Details
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+
+</div>
